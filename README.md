@@ -42,6 +42,18 @@ If you need to disable individual checks, open `./github/workflows/qcom-prefligh
 | [qualcomm/commit-emails-check-action](https://github.com/qualcomm/commit-emails-check-action) | GitHub action for checking email addresses in PR/Push commits | @quic-nasserg |
 | [qualcomm/copyright-license-checker-action](https://github.com/qualcomm/copyright-license-checker-action) | GitHub action for copyright and license issues in PR/Push commits | @targoy-qti |
 
+## Versioning Workflows and Actions
+
+After updating your workflow or action, ensure you tag it following [SemVer](https://semver.org/):
+
+```
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible API changes
+MINOR version when you add functionality in a backward compatible manner
+PATCH version when you make backward compatible bug fixes
+```
+
 ## GitHub Rulesets
 
 Rulesets can be used to require workflows to pass prior to merge. Some workflows are required for all repos and managed at an organization level. Individual repositories can also require workflows and checks to pass prior to merge. See [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) for more information.
