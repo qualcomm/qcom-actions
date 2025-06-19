@@ -1,4 +1,4 @@
-name: preflight-checkers 
+name: qcom-preflight-checks
 on:
   pull_request_target:
     branches: [ "main" ]
