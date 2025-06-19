@@ -99,4 +99,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Check PR emails
-        uses: qualcomm/commit-emails-check-action@main
+        uses: qualcomm/commit-emails-check-action@v1.0.0
