@@ -54,6 +54,8 @@ MINOR version when you add functionality in a backward compatible manner
 PATCH version when you make backward compatible bug fixes
 ```
 
+Use GitHub's "Create a new release" in the Releases section. Click the "Generate release notes" to pre-populate a list of merged PRs in the diff, updating as needed.
+
 ## GitHub Rulesets
 
 Rulesets can be used to require workflows to pass prior to merge. Some workflows are required for all repos and managed at an organization level. Individual repositories can also require workflows and checks to pass prior to merge. See [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) for more information.
