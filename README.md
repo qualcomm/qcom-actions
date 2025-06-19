@@ -29,7 +29,7 @@ To start using `qcom-preflight-checks` in your repository follow one of the opti
     1. This will create a GitHub Action config file in your repo under the path `.github/workflows/qcom-preflight-checks.yml`
     1. Adjust it as needed, e.g. the qcom-preflight-checks workflow is configured to run on Push and Pull Requests into the default branch (typically main), but you may want to further adjust when it runs.
 
-#### Hot to Configure
+#### How to Configure
 
 If you need to disable individual checks, open `./github/workflows/qcom-preflight-checks.yml` and set the check to `false`. E.g. if you want to disable `semgrep`, you can set `semgrep: false` in the `with` section of the workflow. Default value is `true` for all checkers.
 
