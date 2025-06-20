@@ -4,14 +4,17 @@ Common actions and workflows for Qualcomm repositories.
 
 ## Workflows
 
-### qcom-preflight-checks
+### Qualcomm Preflight Checks
 
-This is a reusable workflow that runs a series of preflight checks on your proposed contribution. The checks include:
+`qcom-preflight-checks` is a reusable workflow that runs a series of preflight checks on your proposed contribution. The checks include:
 
-* **[Repolinter](https://github.com/todogroup/repolinter)**: Checks the repository for consistency and adherence to coding standards.
-* **[Semgrep](https://github.com/semgrep/semgrep)**: Runs a static analysis tool to detect potential security vulnerabilities and coding errors.
-* **[Copyright-License-Detector](https://github.com/qualcomm/copyright-license-checker-action)**: Checks for proper copyright and licensing information in the code.
-* **[PR-Check-Emails](https://github.com/qualcomm/commit-emails-check-action)**: Verifies that the commit emails are properly formatted.
+| Action/Workflow  | Description  | POC |
+| ------------- | ------------- |------------- |
+| [todogroup/repolinter](https://github.com/todogroup/repolinter)| GitHub action for checking the repository for consistency and adherence to coding standards| @mynameistechno |
+| [semgrep/semgrep](https://github.com/semgrep/semgrep) | GitHub action for running Semgrep static analysis tool| @njjetha and @igibek |
+| [qualcomm/commit-emails-check-action](https://github.com/qualcomm/commit-emails-check-action) | GitHub action for checking email addresses in PR/Push commits | @quic-nasserg |
+| [qualcomm/copyright-license-checker-action](https://github.com/qualcomm/copyright-license-checker-action) | GitHub action for copyright and license issues in PR/Push commits | @targoy-qti |
+| [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | Detects vulnerable dependencies and invalid licenses in PRs | @igibek |
 
 Each check can be individually disabled when not applicable to your project, however in general they should not be disabled. Create an [Issue](https://github.com/qualcomm/qcom-actions/issues) if you run into any issues.
 
@@ -32,15 +35,6 @@ To start using `qcom-preflight-checks` use one of the below options to create th
 #### How to Configure
 
 If you need to disable individual checks, open `./github/workflows/qcom-preflight-checks.yml` in your repository and set the check to `false`. E.g. if you want to disable `semgrep`, you can set `semgrep: false` in the `with` section of the workflow. Default value is `true` for all checkers.
-
-## Actions
-
-| Action     | Description      | POC |
-| ------------- | ------------- |------------- |
-| repolinter| GitHub action for checking the repository for consistency and adherence to coding standards| @mynameistechno |
-| semgrep | GitHub action for running Semgrep static analysis tool| @njjetha and @igibek |
-| [qualcomm/commit-emails-check-action](https://github.com/qualcomm/commit-emails-check-action) | GitHub action for checking email addresses in PR/Push commits | @quic-nasserg |
-| [qualcomm/copyright-license-checker-action](https://github.com/qualcomm/copyright-license-checker-action) | GitHub action for copyright and license issues in PR/Push commits | @targoy-qti |
 
 ## Versioning Workflows and Actions
 
