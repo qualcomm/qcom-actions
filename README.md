@@ -6,7 +6,7 @@ Common actions and workflows for Qualcomm repositories.
 
 ### Qualcomm Preflight Checks
 
-`qcom-preflight-checks` is a reusable workflow that runs a series of preflight checks on your proposed contribution. The checks include:
+`qcom-preflight-checks` calls a [reusable-workflow](https://github.com/qualcomm/qcom-reusable-workflows/blob/main/.github/workflows/qcom-preflight-checks-reusable-workflow.yml) that runs a series of preflight checks on your proposed contribution. The checks include:
 
 | Action/Workflow  | Description  | POC |
 | ------------- | ------------- |------------- |
