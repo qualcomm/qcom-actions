@@ -22,7 +22,7 @@ Each check can be individually disabled when not applicable to your project, how
 
 To start using `qcom-preflight-checks` use one of the below options to create the workflow file in your repository:
 
-1. Copy the file [./github/workflows/qcom-preflight-checks.yml](./github/workflows/qcom-preflight-checks.yml) to your repository's `.github/workflows` directory.
+1. Copy the file [./github/workflows/qcom-preflight-checks.yml](https://github.com/qualcomm/qcom-actions/blob/main/.github/workflows/qcom-preflight-checks.yml) to your repository's `.github/workflows` directory.
 1. Repositories created using [qualcomm/qualcomm-repository-template](https://github.com/qualcomm/qualcomm-repository-template), will include the file at `./github/workflows/qcom-preflight-checks.yml`.
 1. Create the file via the **Actions** tab in the UI:
     1. Click on Actions
