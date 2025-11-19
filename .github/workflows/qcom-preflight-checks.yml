@@ -1,6 +1,6 @@
 name: Qualcomm Preflight Checks
 on:
-  pull_request_target:
+  pull_request:
     branches: [ "main" ]
   push:
     branches: [ "main" ]
@@ -20,5 +20,7 @@ jobs:
         copyright-license-detector: true   # default: true
         pr-check-emails: true              # default: true
         dependency-review: true            # default: true
-    secrets:
-      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+        commit-msg-check: true             # default: true
+
+        # sub-char-limit: 50
+        # desc-char-limit: 72
