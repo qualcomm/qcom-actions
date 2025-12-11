@@ -50,6 +50,39 @@ PATCH version when you make backward compatible bug fixes
 
 Use GitHub's "Create a new release" in the Releases section. Click the "Generate release notes" to pre-populate a list of merged PRs in the diff, updating as needed.
 
+### Why you should not use main or a moving branch
+
+Using main (or any branch) to reference an action or a reusable workflow seems convenient, but it introduces three classes of risk:
+
+#### Supply‑chain risk
+
+The upstream maintainer can force‑push unreviewed code or accidentally merge code that adds a malicious step. Your workflow will pick it up automatically the next run.
+
+#### Breaking changes & reproducibility loss
+
+A minor upstream change (inputs/outputs, environment assumptions) can silently change behavior and break builds.
+
+#### Incident blast radius
+
+When many repositories reference main, a single upstream change can fail all pipelines at once.
+
+### Alternatives to using a branch
+
+To ensure callers of workflow files and actions have the latest, below are some alternatives.
+
+#### Dependabot
+
+* Dependabot can automatically open PRs when a new version of a referenced workflow or action is published
+* [qualcomm-repository-template](https://github.com/qualcomm/qualcomm-repository-template) already includes the [dependabot config](https://github.com/qualcomm/qualcomm-repository-template/blob/main/.github/dependabots.yaml) required for this to work for GitHub Actions/Workflow files. If you didn't use the template repo when creating your project, you can manually create it.
+* Maintainers that want to strictly control dependency upgrades may prefer this approach
+
+#### Floating tags e.g. @v1
+
+* Some projects create a major version tag (e.g., v1) and then move that tag forward as they release new minor or patch versions (v1.1.0, v1.2.3, etc.).
+* This allows consumers to get updates without changing their workflow file every time.
+* This approach has similar risks to using a branch. However, some maintainers prefer this approach and are OK with the potential reproducibility loss and other issues related to tag mutation
+* Some projects leverage workflows to automate moving major version tags forward whenever a minor or patch release is made. E.g. [actions/update-major-version-tag](https://github.com/marketplace/actions/update-major-version-tag) or a [simple gist example](https://gist.github.com/cicirello/ade1d559a89104140557389365154bc1).
+
 ## GitHub Rulesets
 
 Rulesets can be used to require workflows to pass prior to merge. Some workflows are required for all repos and managed at an organization level. Individual repositories can also require workflows and checks to pass prior to merge. See [About Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) for more information.
