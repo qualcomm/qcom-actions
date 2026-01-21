@@ -15,6 +15,7 @@ Common actions and workflows for Qualcomm repositories.
 | [qualcomm/commit-emails-check-action](https://github.com/qualcomm/commit-emails-check-action) | GitHub action for checking email addresses in PR/Push commits | @quic-nasserg |
 | [qualcomm/copyright-license-checker-action](https://github.com/qualcomm/copyright-license-checker-action) | GitHub action for copyright and license issues in PR/Push commits | @targoy-qti |
 | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | Detects vulnerable dependencies and invalid licenses in PRs | @igibek |
+| [qualcomm/commit-msg-check-action](https://github.com/qualcomm/commit-msg-check-action) | GitHub action for validating commit message format and content | @ynancher |
 
 Each check can be individually disabled when not applicable to your project, however in general they should not be disabled. Create an [Issue](https://github.com/qualcomm/qcom-actions/issues) if you run into any issues.
 
@@ -34,7 +35,7 @@ To start using `qcom-preflight-checks` use one of the below options to create th
 
 #### How to Configure
 
-If you need to disable individual checks, open `./github/workflows/qcom-preflight-checks.yml` in your repository and set the check to `false`. E.g. if you want to disable `semgrep`, you can set `semgrep: false` in the `with` section of the workflow. Default value is `true` for all checkers.
+If you need to disable individual checks, open `./github/workflows/qcom-preflight-checks.yml` in your repository and set the check to `false`. E.g. if you want to disable `semgrep`, you can set `enable-semgrep-scan: false` in the `with` section of the workflow. To disable the commit message check, set `enable-commit-msg-check: false`. Default value is `true` for all checkers except for commit message check which defaults to `false`.
 
 ## Versioning Workflows and Actions
 
