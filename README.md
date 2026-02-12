@@ -15,7 +15,7 @@ Common actions and workflows for Qualcomm repositories.
 | [qualcomm/commit-emails-check-action](https://github.com/qualcomm/commit-emails-check-action) | GitHub action for checking email addresses in PR/Push commits | @quic-nasserg |
 | [qualcomm/copyright-license-checker-action](https://github.com/qualcomm/copyright-license-checker-action) | GitHub action for copyright and license issues in PR/Push commits | @targoy-qti |
 | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | Detects vulnerable dependencies and invalid licenses in PRs | @igibek |
-| [qualcomm/commit-msg-check-action](https://github.com/qualcomm/commit-msg-check-action) | GitHub action for validating commit message format and content | @ynancher |
+| [qualcomm/commit-msg-check-action](https://github.com/qualcomm/commit-msg-check-action) | GitHub action for validating basic commit message format and content (enablement is opt-in) | @ynancher |
 
 Each check can be individually disabled when not applicable to your project, however in general they should not be disabled. Create an [Issue](https://github.com/qualcomm/qcom-actions/issues) if you run into any issues.
 
