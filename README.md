@@ -25,13 +25,6 @@ To start using `qcom-preflight-checks` use one of the below options to create th
 
 1. Copy the file [./github/workflows/qcom-preflight-checks.yml](https://github.com/qualcomm/qcom-actions/blob/main/.github/workflows/qcom-preflight-checks.yml) to your repository's `.github/workflows` directory.
 1. Repositories created using [qualcomm/qualcomm-repository-template](https://github.com/qualcomm/qualcomm-repository-template), will include the file at `./github/workflows/qcom-preflight-checks.yml`.
-1. Create the file via the **Actions** tab in the UI:
-    1. Click on Actions
-    1. If you have existing actions in the repo, click "New workflow", else skip to next step
-    1. Scroll to `By Qualcomm Technologies, Inc.` section and click `Configure` under `Qualcomm Preflight Checker Workflow`
-    1. Click "Commit changes...", select "Commit directly to the main branch" (or feel free to create a new branch and start a PR), ensure your Qualcomm email is selected under "Commit Email", and then click "Sign off and commit changes"
-    1. This will create a GitHub Action config file in your repo under the path `.github/workflows/qcom-preflight-checks.yml`
-    1. Adjust it as needed, e.g. the qcom-preflight-checks workflow is configured to run on Push and Pull Requests into the default branch (typically main), but you may want to further adjust when it runs.
 
 #### How to Configure
 
